@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins')
+
+// -------------------------------
+//  Variables
+// -------------------------------
+$background: #37385F
+$text_color: #D7D7EF
+$social_border: 1px solid transparentize($text_color, .75)
+$font_family: 'Poppins', sans-serif
+
+
+// -------------------------------
+//  Mixins
+// -------------------------------
+=transition($duration)
+  transition: all $duration cubic-bezier(0.42, 0, 0.58, 1)
+
+=flex($direction, $center_content)
+  display: flex
+  flex-flow: $direction nowrap
+  @if $center_content
+    justify-content: center
+    align-items: center
+
+
+// -------------------------------
+//  Helpers
+// -------------------------------
+button.menuToggle.open
+  transform: rotateZ(45deg)
+
+.blurred
+  +transition(50ms)
+  filter: blur(5px)

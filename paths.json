@@ -1,0 +1,19 @@
+{
+  "pug": {
+    "src": ["src/pug/*.pug", "!src/pug/*.layout.pug", "!src/pug/_*.pug"],
+    "dest": "site"
+  },
+  "sass": {
+    "src": ["src/sass/*.sass", "!src/sass/_*.sass"],
+    "dest": "site/css"
+  },
+  "coffee": {
+    "src": "src/coffee/*.coffee",
+    "dest": "site/js"
+  },
+  "clean": [
+    "site/css",
+    "site/js",
+    "site/*.html"
+  ]
+}

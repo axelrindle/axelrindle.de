@@ -1,0 +1,53 @@
+@import "_vars"
+@import "_basic"
+@import "_responsive"
+@import "_layout"
+
+div.front__text
+  flex: 1 0 auto
+  +flex(column, true)
+
+  +transition(150ms)
+
+  h1, h2
+    margin: 10px
+    text-align: center
+
+  h1
+    font-size: 100px
+
+  h2
+    font-size: 40px
+
+.front__social
+  display: flex
+  flex-flow: row wrap
+
+  border-top: $social_border
+
+  a.link
+    flex: 1 0 auto
+    padding: 20px
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    +transition(100ms)
+
+    span
+      margin-left: 10px
+      font-size: 18px
+
+    b
+      font-size: 18px
+
+    i
+      font-size: 22px
+
+    &:hover
+      background-color: $text_color
+      color: $background
+
+    &:not(:last-child)
+      border-right: $social_border
