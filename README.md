@@ -15,4 +15,4 @@ $ yarn
 ```bash
 $ gulp compile
 ```
-Compiles files are written to **site/**
+Compiled files are written to **site/**
