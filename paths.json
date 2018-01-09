@@ -8,7 +8,7 @@
     "dest": "site/css"
   },
   "coffee": {
-    "src": "src/coffee/*.coffee",
+    "src": ["src/coffee/*.coffee", "!src/coffee/_*.coffee"],
     "dest": "site/js"
   },
   "clean": [
