@@ -18,6 +18,8 @@ html(lang="en")
     block css
 
   body
+    canvas#background
+    
     //button.menuToggle +
 
     //div.menu
@@ -33,8 +35,10 @@ html(lang="en")
 
       block content
 
-      // JS files
-      script(src="vendor/fa.js")
       //script(src="vendor/jquery-3.2.1.min.js")
-      //script(src="js/menu.js")
-      block js
+    // JS files
+    script(src="vendor/fa.js")
+    script(src="vendor/granim.min.js")
+    script(src="js/background.js")
+    //script(src="js/menu.js")
+    block js
