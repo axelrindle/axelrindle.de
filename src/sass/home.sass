@@ -1,13 +1,11 @@
 @import "_vars"
 @import "_basic"
-@import "_responsive"
 @import "_layout"
+@import "_corner_ribbon"
 
 div.front__text
   flex: 1 0 auto
   +flex(column, true)
-
-  +transition(150ms)
 
   h1, h2
     margin: 10px
@@ -18,6 +16,27 @@ div.front__text
 
   h2
     font-size: 40px
+
+.donate
+  +flex(row, true)
+
+  .badge
+    +flex(row, true)
+    border: $social_border
+    padding: 15px 30px 15px 15px
+    cursor: pointer
+    +transition(100ms)
+
+    &:hover
+      background-color: $text_color
+      color: $background
+
+    img
+      height: 50px
+      width: 50px
+
+    span
+      font-size: 18px
 
 .front__social
   display: flex
@@ -51,3 +70,30 @@ div.front__text
 
     &:not(:last-child)
       border-right: $social_border
+
+.coinhive-miner
+  height: 310px
+  width: 256px
+
+.only__small
+  display: none
+
+@media screen and(max-width: 700px)
+
+  div.front__text
+    h1
+      font-size: 15vw !important
+
+    h2
+      font-size: 6vw !important
+
+  .only__big
+    display: none
+
+  .only__small
+    display: block
+
+@media screen and(max-width: 1026px)
+
+  .links__responsive a
+    border-bottom: $social_border

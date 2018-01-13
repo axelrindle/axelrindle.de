@@ -1,44 +1,39 @@
 doctype html
 html(lang="en")
-  head
-    // Meta Tags for more compability.
-    meta(charset="utf-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0")
-    meta(name="theme-color", content="#37385F")
+	head
+		// Meta Tags for more compability.
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0")
+		meta(name="theme-color", content="#37385F")
 
-    // Favicon
-    link(rel="icon" href="favicon.png")
+		// Favicon
+		link(rel="icon" href="favicon.png")
 
-    // Site title
-    title Axel Rindle
+		// Site title
+		title Axel Rindle
 
-    // CSS files
-    link(rel="stylesheet" href="vendor/normalize.css")
-    block css
+		// CSS files
+		link(rel="stylesheet" href="vendor/normalize.css")
+		block css
 
-  body
-    canvas#background
-    
-    //button.menuToggle +
+	body
+		canvas#background
+		
+		//button.menuToggle +
 
-    //div.menu
-      div.items
-        a(href="index.html" id="home") Home
-        a(href="projects.html" id="projects") Projects
-        //a(href="portfolio.html" id="portfolio") Portfolio
-        //a(href="about.html" id="about") About
+		//div.menu
+			div.items
+				a(href="index.html" id="home") Home
+				//a(href="projects.html" id="projects") Projects
+				//a(href="portfolio.html" id="portfolio") Portfolio
+				//a(href="about.html" id="about") About
 
-    div.wrapper
+		div.wrapper
+			block content
 
-      //canvas.background#background_canvas
-
-      block content
-
-      //script(src="vendor/jquery-3.2.1.min.js")
-    // JS files
-    script(src="vendor/fa.js")
-    script(src="vendor/granim.min.js")
-    script(src="js/background.js")
-    //script(src="js/menu.js")
-    block js
+		// JS files
+		script(src="vendor/jquery-3.2.1.min.js")
+		script(src="vendor/fa.js")
+		//script(src="js/menu.js")
+		block js

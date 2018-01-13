@@ -1,36 +1,63 @@
 extends page.layout.pug
 
 block css
-  link(rel="stylesheet" href="css/home.css")
+	link(rel="stylesheet" href="css/home.css")
 
 block content
+	
+	a.corner-ribbon.top-left.sticky.outline(href="imprint.html") 
+		| Imprint
 
-  div.front__text
-    h1 Axel Rindle
-    h2 Hobby Developer • Student • Dedicated to Open Source
+	div.modal#donate_modal
+		div.background
+		div.modal-content
+			span.close &times;
+			div.modal-header
+				p(style="max-width: 252px;")
+					| "Donate" some of your CPU power to generate hashes for the Monero cryptocurrency.
+				p(style="max-width: 252px;")
+					b Please note:&nbsp;
+					| Before you click on "Start Mining", be aware that this will fully utilize your CPU, which might result in it becoming hot.
+			div.modal-body
+				div.coinhive-miner(data-key="881ejB7w6qTVMj8QR7UfzhkPCDAe4nJ2")
+					em Loading Captcha...<br>If it doesn't load, please disable Adblock!
+				
+	div.front__text
+		h1 Axel Rindle
+		h2 Hobby Developer • Student • Dedicated to Open Source      
 
-  div.front__social.links__responsive
+	div.front__social.links__responsive
 
-    a.link(href="https://twitter.com/axelrindle")
-      i.fa.fa-twitter
-      span.only__big Twitter
+		a.link(href="https://twitter.com/axelrindle")
+			i.fa.fa-twitter
+			span.only__big Twitter
 
-    a.link(href="https://github.com/axelrindle")
-      i.fa.fa-github
-      span.only__big GitHub
+		a.link(href="https://github.com/axelrindle")
+			i.fa.fa-github
+			span.only__big GitHub
 
-    a.link(href="https://codepen.io/axelrindle")
-      i.fa.fa-codepen
-      span.only__big CodePen
+		a.link(href="https://codepen.io/axelrindle")
+			i.fa.fa-codepen
+			span.only__big CodePen
 
-    a.link(href="mailto:axel.rindle@gmx.de")
-      i.fa.fa-envelope
-      span.only__big Mail
+		a.link(href="mailto:axel.rindle@gmx.de")
+			i.fa.fa-envelope
+			span.only__big Mail
 
-    a.link(href="https://stackoverflow.com/users/5423625/axel")
-      i.fa.fa-stack-overflow
-      span.only__big StackOverflow
+		a.link(href="https://stackoverflow.com/users/5423625/axel")
+			i.fa.fa-stack-overflow
+			span.only__big StackOverflow
 
-    a.link(href="https://developer.mozilla.org/de/profiles/axelrindle")
-      b moz://a
-      span.only__big MDN
+		a.link(href="https://developer.mozilla.org/de/profiles/axelrindle")
+			b moz://a
+			span.only__big MDN
+			
+		a.link(href="#donate_modal" id="donate")
+			i.fa.fa-beer
+			span.only__big Donate
+
+block js
+	script(src="vendor/granim.min.js")
+	script(src="js/background.js")
+	script(src="https://authedmine.com/lib/simple-ui.min.js" async)
+	script(src="js/home.js" async)
