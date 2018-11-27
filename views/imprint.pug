@@ -1,12 +1,12 @@
-extends page.layout.pug
+extends layout/main
 
 block css
-	link(rel="stylesheet" href="css/imprint.css")
+	link(rel="stylesheet" href=$asset("css/imprint.css"))
 
 block content
 	.impressum
 		h1
-			a(href="..")
+			a(href="/")
 				i.fa.fa-arrow-left
 					| &nbsp; Back
 		h1 Impressum
@@ -16,8 +16,8 @@ block content
 		h2 Kontakt:
 		p
 			| E-Mail:&nbsp;
-			a(href='axel.rindle@gmx.de')
-				| axel.rindle@gmx.de
+			a(href='mailto:mail@axelrindle.de')
+				| mail@axelrindle.de
 		h2 Haftung für Inhalte
 		p
 			| Als Diensteanbieter sind wir
@@ -61,7 +61,7 @@ block content
 		p
 			| Quelle: 
 			a(href='https://www.e-recht24.de')
-				| eRecht24
+				| e-recht24.de
 		
 		h1.space-top Datenschutzerklärung
 		h2 Datenschutz
@@ -116,5 +116,4 @@ block content
 		p
 			| Quelle: 
 			a(href='https://www.e-recht24.de')
-				| e-
-				| recht24.de
+				| e-recht24.de

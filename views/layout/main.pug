@@ -8,32 +8,21 @@ html(lang="en")
 		meta(name="theme-color", content="#37385F")
 
 		// Favicon
-		link(rel="icon" href="favicon.png")
+		link(rel="icon" href=$asset("img/favicon.png"))
 
 		// Site title
 		title Axel Rindle
 
 		// CSS files
-		link(rel="stylesheet" href="vendor/normalize.css")
+		link(rel="stylesheet" href=$asset("vendor/normalize.css"))
+		link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.5.0/css/all.css', integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU', crossorigin='anonymous')
 		block css
 
 	body
 		canvas#background
-		
-		//button.menuToggle +
-
-		//div.menu
-			div.items
-				a(href="index.html" id="home") Home
-				//a(href="projects.html" id="projects") Projects
-				//a(href="portfolio.html" id="portfolio") Portfolio
-				//a(href="about.html" id="about") About
 
 		div.wrapper
 			block content
 
 		// JS files
-		script(src="vendor/jquery-3.2.1.min.js")
-		script(src="vendor/fa.js")
-		//script(src="js/menu.js")
 		block js
