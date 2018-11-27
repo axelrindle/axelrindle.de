@@ -1,7 +1,7 @@
-@import "_vars"
-@import "_basic"
-@import "_layout"
-@import "_corner_ribbon"
+@import "util/vars"
+@import "util/basic"
+@import "util/layout"
+@import "util/corner_ribbon"
 
 div.front__text
   flex: 1 0 auto
@@ -78,8 +78,7 @@ div.front__text
 .only__small
   display: none
 
-@media screen and(max-width: 700px)
-
+@media screen and (max-width: 700px)
   div.front__text
     h1
       font-size: 15vw !important
@@ -93,7 +92,6 @@ div.front__text
   .only__small
     display: block
 
-@media screen and(max-width: 1026px)
-
+@media screen and (max-width: 1026px)
   .links__responsive a
     border-bottom: $social_border
