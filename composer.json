@@ -1,0 +1,6 @@
+{
+    "require": {
+        "altorouter/altorouter": "^1.2",
+        "pug-php/pug": "^3.2"
+    }
+}
