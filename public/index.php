@@ -1,33 +1,14 @@
 <?php
 
+// show errors
+use App\Handler;
+
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 // Autoload dependencies
 require_once '../vendor/autoload.php';
-use Pug\Pug;
 
-// Create a router
-$router = new AltoRouter();
-
-// Create a pug instance
-$pug = new Pug(array(
-    'basedir' => '../views',
-    'cache' => '../cache'
-));
-$pug->share('asset', function ($path) {
-    return '/assets/' . $path;
-});
-
-// Map routes
-$render = function ($path = 'index') {
-    global $pug;
-    return $pug->renderFile(sprintf('%s.pug', $path));
-};
-$router->map('GET', '/', $render);
-$router->map('GET', '/[a:path]?/', $render);
-
-// Match!
-$match = $router->match();
-if ($match) {
-    echo call_user_func_array($match['target'], $match['params']);
-} else {
-    echo '404';
-}
+// Handle the incoming request
+$handler = new Handler();
+echo $handler->handle();

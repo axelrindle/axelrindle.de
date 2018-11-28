@@ -1,0 +1,48 @@
+{% extends "_layout.twig" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+{% endblock %}
+
+{% block content %}
+    <a class="corner-ribbon top-left sticky outline" href="/imprint/">
+        Imprint
+    </a>
+
+    <div class="front__text">
+        <h1>Axel Rindle</h1>
+        <h2>Hobby Developer • Student • Dedicated to Open Source</h2>
+    </div>
+
+    <div class="front__social links__responsive">
+        <a class="link" href="https://twitter.com/axelrindle">
+            <i class="fab fa-twitter"></i>
+            <span class="only__big">Twitter</span>
+        </a>
+        <a class="link" href="https://github.com/axelrindle">
+            <i class="fab fa-github"></i>
+            <span class="only__big">Github</span>
+        </a>
+        <a class="link" href="https://codepen.io/axelrindle">
+            <i class="fab fa-codepen"></i>
+            <span class="only__big">Codepen</span>
+        </a>
+        <a class="link" href="mailto:axel.rindle@gmx.de">
+            <i class="fas fa-envelope"></i>
+            <span class="only__big">Email</span>
+        </a>
+        <a class="link" href="https://stackoverflow.com/users/5423625/axel">
+            <i class="fab fa-stack-overflow"></i>
+            <span class="only__big">StackOverflow</span>
+        </a>
+        <a class="link" href="https://developer.mozilla.org/de/profiles/axelrindle">
+            <b>moz://a</b>
+            <span class="only__big">MDN</span>
+        </a>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{{ asset("vendor/granim.min.js") }}"></script>
+    <script src="{{ asset("js/background.js") }}"></script>
+{% endblock %}

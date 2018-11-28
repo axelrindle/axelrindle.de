@@ -1,6 +1,12 @@
 {
     "require": {
+        "php": ">=5.6.38",
         "altorouter/altorouter": "^1.2",
-        "pug-php/pug": "^3.2"
+        "twig/twig": "^1.35.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "private/"
+        }
     }
 }
