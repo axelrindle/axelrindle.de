@@ -15,7 +15,6 @@ use Twig_SimpleFunction;
  */
 class Handler
 {
-    private $basePath;
     private $router;
     private $twig_loader;
     private $twig_env;
