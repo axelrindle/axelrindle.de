@@ -6,6 +6,7 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
+    "del-cli": "^2.0.0",
     "node-sass": "^4.12.0",
     "parcel-bundler": "^1.12.3",
     "pug": "^2.0.3"
@@ -14,6 +15,7 @@
     "compile:sass": "parcel build --no-source-maps -d public/assets/css src/sass/*.sass",
     "watch:sass": "parcel watch --no-source-maps -d public/assets/css src/sass/*.sass",
     "compile:js": "parcel build --no-source-maps -d public/assets/js src/js/*.js",
-    "watch:js": "parcel watch --no-source-maps -d public/assets/js src/js/*.js"
+    "watch:js": "parcel watch --no-source-maps -d public/assets/js src/js/*.js",
+    "clean": "del public/assets/css public/assets/js"
   }
 }
