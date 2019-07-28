@@ -12,31 +12,20 @@ div.front__text
     text-align: center
 
   h1
-    font-size: 100px
+    font-size: $name_size
+
+    span
+      font-weight: inherit
+      transition: all .15s
+
+      &:hover
+        opacity: .5
+
+      &.fancy
+        font-family: 'Lobster', cursive
 
   h2
     font-size: 40px
-
-.donate
-  +flex(row, true)
-
-  .badge
-    +flex(row, true)
-    border: $social_border
-    padding: 15px 30px 15px 15px
-    cursor: pointer
-    +transition(100ms)
-
-    &:hover
-      background-color: $text_color
-      color: $background
-
-    img
-      height: 50px
-      width: 50px
-
-    span
-      font-size: 18px
 
 .front__social
   display: flex
