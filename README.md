@@ -2,9 +2,10 @@
 > Personal website.
 
 ## Building
-### Install modules
+### Install dependencies
 ```bash
 $ npm install
+$ composer install
 ```
 
 ### Compile source files
