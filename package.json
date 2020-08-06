@@ -6,8 +6,8 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "del-cli": "^2.0.0",
-    "node-sass": "^4.13.1",
+    "del-cli": "^3.0.1",
+    "node-sass": "^4.14.1",
     "parcel-bundler": "^1.12.4",
     "pug": "^2.0.3"
   },
