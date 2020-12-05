@@ -3,6 +3,14 @@
 @import "util/layout"
 @import "util/corner_ribbon"
 
+body
+  background: rgb(195,55,100)
+  background: -moz-linear-gradient(90deg, rgba(195,55,100,1) 0%, rgba(29,38,113,1) 100%)
+  background: -webkit-linear-gradient(90deg, rgba(195,55,100,1) 0%, rgba(29,38,113,1) 100%)
+  background: linear-gradient(90deg, rgba(195,55,100,1) 0%, rgba(29,38,113,1) 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c33764",endColorstr="#1d2671",GradientType=1)
+
+
 div.front__text
   flex: 1 0 auto
   +flex(column, true)
