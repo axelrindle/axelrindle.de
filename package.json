@@ -1,21 +1,15 @@
 {
-  "name": "axelrindle.de",
-  "version": "1.0.0",
-  "description": "Personal website.",
-  "author": "Axel Rindle <axel.rindle@gmx.de>",
-  "license": "MIT",
   "private": true,
   "devDependencies": {
+    "@babel/compat-data": "^7.12.7",
     "del-cli": "^3.0.1",
-    "node-sass": "^4.14.1",
-    "parcel-bundler": "^1.12.4",
-    "pug": "^2.0.3"
+    "node-sass": "^5.0.0",
+    "parcel-bundler": "^1.12.4"
   },
   "scripts": {
     "compile:sass": "parcel build --no-source-maps -d public/assets/css src/sass/*.sass",
     "watch:sass": "parcel watch --no-source-maps -d public/assets/css src/sass/*.sass",
-    "compile:js": "parcel build --no-source-maps -d public/assets/js src/js/*.js",
-    "watch:js": "parcel watch --no-source-maps -d public/assets/js src/js/*.js",
-    "clean": "del public/assets/css public/assets/js"
+    "clean": "del public/assets/css public/assets/js",
+    "serve": "php -S localhost:8000 -t public/"
   }
 }
