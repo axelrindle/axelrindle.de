@@ -111,3 +111,4 @@ typings/
 
 public/assets/css
 public/assets/js
+.parcel-cache/

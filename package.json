@@ -1,14 +1,13 @@
 {
   "private": true,
   "devDependencies": {
-    "@babel/compat-data": "^7.12.7",
     "del-cli": "^3.0.1",
-    "node-sass": "^5.0.0",
-    "parcel-bundler": "^1.12.4"
+    "parcel": "^2.0.0-nightly.466",
+    "sass": "^1.30.0"
   },
   "scripts": {
-    "compile:sass": "parcel build --no-source-maps -d public/assets/css src/sass/*.sass",
-    "watch:sass": "parcel watch --no-source-maps -d public/assets/css src/sass/*.sass",
+    "compile:sass": "parcel build --no-source-maps --dist-dir public/assets/css src/sass/*.sass",
+    "watch:sass": "parcel watch --no-source-maps --dist-dir public/assets/css src/sass/*.sass",
     "clean": "del public/assets/css public/assets/js",
     "serve": "php -S localhost:8000 -t public/"
   }
