@@ -4,87 +4,87 @@
 @import "util/corner_ribbon"
 
 body
-  background: rgb(195,55,100)
-  background: -moz-linear-gradient(90deg, rgba(195,55,100,1) 0%, rgba(29,38,113,1) 100%)
-  background: -webkit-linear-gradient(90deg, rgba(195,55,100,1) 0%, rgba(29,38,113,1) 100%)
-  background: linear-gradient(90deg, rgba(195,55,100,1) 0%, rgba(29,38,113,1) 100%)
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c33764",endColorstr="#1d2671",GradientType=1)
+	background: rgb(195,55,100)
+	background: -moz-linear-gradient(90deg, rgba(195,55,100,1) 0%, rgba(29,38,113,1) 100%)
+	background: -webkit-linear-gradient(90deg, rgba(195,55,100,1) 0%, rgba(29,38,113,1) 100%)
+	background: linear-gradient(90deg, rgba(195,55,100,1) 0%, rgba(29,38,113,1) 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c33764",endColorstr="#1d2671",GradientType=1)
 
 
 div.front__text
-  flex: 1 0 auto
-  +flex(column, true)
+	flex: 1 0 auto
+	+flex(column, true)
 
-  h1, h2
-    margin: 10px
-    text-align: center
+	h1, h2
+		margin: 10px
+		text-align: center
 
-  h1
-    font-size: $name_size
+	h1
+		font-size: $name_size
 
-    span
-      font-weight: inherit
-      transition: all .15s
+		span
+			font-weight: inherit
+			transition: all .15s
 
-      &:hover
-        opacity: .5
+			&:hover
+				opacity: .5
 
-      &.fancy
-        font-family: 'Lobster', cursive
+			&.fancy
+				font-family: 'Lobster', cursive
 
-  h2
-    font-size: 40px
+	h2
+		font-size: 40px
 
 .front__social
-  display: flex
-  flex-flow: row wrap
+	display: flex
+	flex-flow: row wrap
 
-  border-top: $social_border
+	border-top: $social_border
 
-  a.link
-    flex: 1 0 auto
-    padding: 20px
+	a.link
+		flex: 1 0 auto
+		padding: 20px
 
-    display: flex
-    align-items: center
-    justify-content: center
+		display: flex
+		align-items: center
+		justify-content: center
 
-    +transition(100ms)
+		+transition(100ms)
 
-    span
-      margin-left: 10px
-      font-size: 18px
+		span
+			margin-left: 10px
+			font-size: 18px
 
-    b
-      font-size: 18px
+		b
+			font-size: 18px
 
-    i
-      font-size: 22px
+		i
+			font-size: 22px
 
-    &:hover
-      background-color: $text_color
-      color: $background
+		&:hover
+			background-color: $text_color
+			color: $background
 
-    &:not(:last-child)
-      border-right: $social_border
+		&:not(:last-child)
+			border-right: $social_border
 
 .only__small
-  display: none
+	display: none
 
 @media screen and (max-width: 700px)
-  div.front__text
-    h1
-      font-size: 15vw !important
+	div.front__text
+		h1
+			font-size: 15vw !important
 
-    h2
-      font-size: 6vw !important
+		h2
+			font-size: 6vw !important
 
-  .only__big
-    display: none
+	.only__big
+		display: none
 
-  .only__small
-    display: block
+	.only__small
+		display: block
 
 @media screen and (max-width: 1026px)
-  .links__responsive a
-    border-bottom: $social_border
+	.links__responsive a
+		border-bottom: $social_border

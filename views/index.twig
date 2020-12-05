@@ -1,70 +1,70 @@
 {% extends "_layout.twig" %}
 
 {% block css %}
-    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/home.css') }}">
 {% endblock %}
 
 {% block content %}
-    <a class="corner-ribbon top-left sticky outline" href="/imprint/">
-        Imprint
-    </a>
+	<a class="corner-ribbon top-left sticky outline" href="/imprint/">
+		Imprint
+	</a>
 
-    <div class="front__text">
-        <h1><span class="fancy">A</span><span>x</span><span>e</span><span>l</span>&nbsp;<span>R</span><span>i</span><span>n</span><span>d</span><span>l</span><span>e</span></h1>
-        <h2>Hobby Developer • Student • Dedicated to Open Source</h2>
-    </div>
+	<div class="front__text">
+		<h1><span class="fancy">A</span><span>x</span><span>e</span><span>l</span>&nbsp;<span>R</span><span>i</span><span>n</span><span>d</span><span>l</span><span>e</span></h1>
+		<h2>Hobby Developer • Student • Dedicated to Open Source</h2>
+	</div>
 
-    <div class="front__social links__responsive">
-        <a class="link" href="https://twitter.com/axelrindle">
-            <i class="fab fa-twitter"></i>
-            <span class="only__big">Twitter</span>
-        </a>
-        <a class="link" href="https://github.com/axelrindle">
-            <i class="fab fa-github"></i>
-            <span class="only__big">Github</span>
-        </a>
-        <a class="link" href="https://codepen.io/axelrindle">
-            <i class="fab fa-codepen"></i>
-            <span class="only__big">Codepen</span>
-        </a>
-        <a class="link" href="mailto:mail@axelrindle.de">
-            <i class="fas fa-envelope"></i>
-            <span class="only__big">Email</span>
-        </a>
-        <a class="link" href="https://stackoverflow.com/users/5423625/axel">
-            <i class="fab fa-stack-overflow"></i>
-            <span class="only__big">StackOverflow</span>
-        </a>
-        <a class="link" href="https://developer.mozilla.org/de/profiles/axelrindle">
-            <b>moz://a</b>
-            <span class="only__big">MDN</span>
-        </a>
-    </div>
+	<div class="front__social links__responsive">
+		<a class="link" href="https://twitter.com/axelrindle">
+			<i class="fab fa-twitter"></i>
+			<span class="only__big">Twitter</span>
+		</a>
+		<a class="link" href="https://github.com/axelrindle">
+			<i class="fab fa-github"></i>
+			<span class="only__big">Github</span>
+		</a>
+		<a class="link" href="https://codepen.io/axelrindle">
+			<i class="fab fa-codepen"></i>
+			<span class="only__big">Codepen</span>
+		</a>
+		<a class="link" href="mailto:mail@axelrindle.de">
+			<i class="fas fa-envelope"></i>
+			<span class="only__big">Email</span>
+		</a>
+		<a class="link" href="https://stackoverflow.com/users/5423625/axel">
+			<i class="fab fa-stack-overflow"></i>
+			<span class="only__big">StackOverflow</span>
+		</a>
+		<a class="link" href="https://developer.mozilla.org/de/profiles/axelrindle">
+			<b>moz://a</b>
+			<span class="only__big">MDN</span>
+		</a>
+	</div>
 {% endblock %}
 
 {% block js %}
-    <script crossorigin="anonymous" integrity="sha256-79ATLdCUzg3BVrKHvdiOJY47UxdQ3viLUdvEsqh2apI=" src="https://cdn.jsdelivr.net/npm/granim@2.0.0/dist/granim.min.js"></script>
-    <script>
-        new Granim({
-            element: '#background',
-            name: 'basic-gradient',
-            direction: 'left-right',
-            opacity: [1, 1],
-            isPausedWhenNotInView: true,
-            stateTransitionSpeed: 500,
-            states: {
-                'default-state': {
-                    gradients: [["#c33764", "#1d2671"], ["#4568dc", "#b06ab3"]]
-                }
-            }
-        });
-    </script>
-    {% if isXmas() %}
-        <script src="{{ asset('vendor/snowflakes.min.js') }}"></script>
-        <script>
-            var sf = new Snowflakes({
-                color: '#ffffff'
-            });
-        </script>
-    {% endif %}
+	<script crossorigin="anonymous" integrity="sha256-79ATLdCUzg3BVrKHvdiOJY47UxdQ3viLUdvEsqh2apI=" src="https://cdn.jsdelivr.net/npm/granim@2.0.0/dist/granim.min.js"></script>
+	<script>
+		new Granim({
+			element: '#background',
+			name: 'basic-gradient',
+			direction: 'left-right',
+			opacity: [1, 1],
+			isPausedWhenNotInView: true,
+			stateTransitionSpeed: 500,
+			states: {
+				'default-state': {
+					gradients: [["#c33764", "#1d2671"], ["#4568dc", "#b06ab3"]]
+				}
+			}
+		});
+	</script>
+	{% if isXmas() %}
+		<script src="{{ asset('vendor/snowflakes.min.js') }}"></script>
+		<script>
+			var sf = new Snowflakes({
+				color: '#ffffff'
+			});
+		</script>
+	{% endif %}
 {% endblock %}
