@@ -43,6 +43,9 @@ class Handler
         $this->twig_env->addFunction(new Twig_SimpleFunction('asset', function ($path) {
             return '/assets/' . $path;
         }));
+        $this->twig_env->addFunction(new Twig_SimpleFunction('isXmas', function () {
+            return isXmas();
+        }));
     }
 
     /**

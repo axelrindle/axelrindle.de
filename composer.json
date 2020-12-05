@@ -2,12 +2,14 @@
     "require": {
         "php": ">=5.6.38",
         "altorouter/altorouter": "^1.2",
-        "twig/twig": "^1.35.4"
+        "twig/twig": "^1.35.4",
+        "nesbot/carbon": "^2.42"
     },
     "autoload": {
         "psr-4": {
             "App\\": "private/"
-        }
+        },
+        "files": ["private/utils.php"]
     },
     "scripts": {
         "serve": "php -S localhost:8000 -t public/"
