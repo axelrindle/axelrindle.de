@@ -5,7 +5,7 @@ use Carbon\Carbon;
 /**
  * @return bool Whether it's xmas time.
  */
-function isXmas()
+function isXmas(): bool
 {
 	$begin = Carbon::create(null, 12);
 	$now = Carbon::now();

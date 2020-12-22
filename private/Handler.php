@@ -15,15 +15,15 @@ use Twig_SimpleFunction;
  */
 class Handler
 {
-	private $router;
-	private $twig_loader;
-	private $twig_env;
+	private AltoRouter $router;
+	private Twig_Loader_Filesystem $twig_loader;
+	private Twig_Environment $twig_env;
 
 	/**
 	 * Handler constructor.
 	 * @throws Exception
 	 */
-	function __construct()
+	public function __construct()
 	{
 		// create instances
 		$this->router = new AltoRouter();
@@ -37,7 +37,7 @@ class Handler
 		$this->mapRoutes();
 	}
 
-	private function registerFilters()
+	private function registerFilters(): void
 	{
 		// asset shortcut helper
 		$this->twig_env->addFunction(new Twig_SimpleFunction('asset', function ($path) {
@@ -51,7 +51,7 @@ class Handler
 	/**
 	 * @throws Exception
 	 */
-	private function mapRoutes()
+	private function mapRoutes(): void
 	{
 		$render = function ($path = 'index') {
 			$template = $this->twig_env->load($path . '.twig');
@@ -64,7 +64,7 @@ class Handler
 	/**
 	 * @return string The compiled template.
 	 */
-	function handle()
+	public function handle(): string
 	{
 		// Match!
 		$match = $this->router->match();
