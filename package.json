@@ -2,7 +2,7 @@
 	"private": true,
 	"devDependencies": {
 		"del-cli": "^3.0.1",
-		"parcel": "^2.0.0-nightly.466",
+		"parcel": "^2.0.0-nightly.486",
 		"sass": "^1.30.0"
 	},
 	"scripts": {
