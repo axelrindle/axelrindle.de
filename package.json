@@ -1,6 +1,7 @@
 {
 	"private": true,
 	"devDependencies": {
+		"@parcel/transformer-sass": "^2.0.0-nightly.720",
 		"del-cli": "^3.0.1",
 		"parcel": "^2.0.0-nightly.486",
 		"sass": "^1.34.1"
