@@ -3,13 +3,12 @@
 	"devDependencies": {
 		"del-cli": "^3.0.1",
 		"parcel": "^2.0.0-nightly.486",
-		"sass": "^1.30.0"
+		"sass": "^1.34.1"
 	},
 	"scripts": {
 		"compile:sass": "parcel build --no-source-maps --dist-dir public/assets/css src/sass/*.sass",
 		"watch:sass": "parcel watch --no-source-maps --dist-dir public/assets/css src/sass/*.sass",
 		"clean": "del public/assets/css public/assets/js",
-		"serve": "php8.0 -S localhost:8000 -t public/",
-		"package:assets": "tar czvf assets.tar.gz public/assets/"
+		"serve": "php8.0 -S localhost:8000 -t public/"
 	}
 }
