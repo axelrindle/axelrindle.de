@@ -1,0 +1,35 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Cache
+        uses: actions/cache@v2.1.6
+        with:
+          path: .parcel-cache
+          key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: 14.x
+      - name: Install dependencies
+        run: npm ci
+      - name: Compile source files
+        run: |
+          npm run compile:sass
+      - name: ssh deploy
+        uses: kostya-ten/ssh-server-deploy@v4
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USER }}
+          private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          scp_source: public
+          scp_target: ~/axelrindle.de
+          before_script: deploy/before.sh
