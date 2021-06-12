@@ -33,4 +33,6 @@ jobs:
           private_key: ${{ secrets.SSH_PRIVATE_KEY }}
           scp_source: public
           scp_target: ~/axelrindle.de
-          before_script: deploy/before.sh
+          before_script: |
+            rm -rf ~/axelrindle.de
+            mkdir ~/axelrindle.de
