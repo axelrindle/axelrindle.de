@@ -9,22 +9,21 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Cache
-        uses: actions/cache@v2.1.6
+        uses: actions/cache@v3
         with:
           path: .parcel-cache
           key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
       - name: Setup Node.js environment
-        uses: actions/setup-node@v2.1.5
+        uses: actions/setup-node@v3
         with:
-          node-version: 14.x
+          node-version: 16.x
       - name: Install dependencies
         run: npm ci
       - name: Compile source files
-        run: |
-          npm run compile:sass
-      - name: ssh deploy
+        run: npm run compile:sass
+      - name: Deploy
         uses: kostya-ten/ssh-server-deploy@v4
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -32,7 +31,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           private_key: ${{ secrets.SSH_PRIVATE_KEY }}
           scp_source: public
-          scp_target: ~/axelrindle.de
+          scp_target: ${{ secrets.DEPLOY_TARGET }}
           before_script: |
-            rm -rf ~/axelrindle.de
-            mkdir ~/axelrindle.de
+            rm -rf ${{ secrets.DEPLOY_TARGET }}
+            mkdir ${{ secrets.DEPLOY_TARGET }}
