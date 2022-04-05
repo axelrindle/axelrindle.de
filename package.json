@@ -4,12 +4,13 @@
 		"@parcel/transformer-sass": "^2.4.1",
 		"del-cli": "^4.0.1",
 		"parcel": "^2.4.1",
-		"sass": "^1.49.11"
+		"sass": "^1.49.11",
+		"serve": "^13.0.2"
 	},
 	"scripts": {
 		"compile:sass": "parcel build --no-source-maps --dist-dir public/assets/css src/sass/*.sass",
 		"watch:sass": "parcel watch --no-source-maps --dist-dir public/assets/css src/sass/*.sass",
 		"clean": "del public/assets/css public/assets/js",
-		"serve": "php8.0 -S localhost:8000 -t public/"
+		"serve": "serve public"
 	}
 }
