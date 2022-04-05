@@ -24,14 +24,13 @@ jobs:
       - name: Compile source files
         run: npm run compile:sass
       - name: Deploy
-        uses: kostya-ten/ssh-server-deploy@v4
+        uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
           port: ${{ secrets.SSH_PORT }}
           username: ${{ secrets.SSH_USER }}
-          private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-          scp_source: public
-          scp_target: ${{ secrets.DEPLOY_TARGET }}
-          before_script: |
-            rm -rf ${{ secrets.DEPLOY_TARGET }}
-            mkdir ${{ secrets.DEPLOY_TARGET }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          passphrase: ${{ secrets.SSH_PRIVATE_KEY_PASSWORD }}
+          source: public
+          target: ${{ secrets.DEPLOY_TARGET }}
+          rm: true
