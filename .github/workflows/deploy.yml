@@ -33,4 +33,5 @@ jobs:
           passphrase: ${{ secrets.SSH_PRIVATE_KEY_PASSWORD }}
           source: public
           target: ${{ secrets.DEPLOY_TARGET }}
+          strip_components: 1
           rm: true
