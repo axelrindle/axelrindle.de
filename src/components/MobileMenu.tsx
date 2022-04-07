@@ -43,9 +43,9 @@ export default function MobileMenu(props: Props) {
 			<button
 				className="
 					lg:hidden
-					absolute bottom-4 right-4 z-20
+					absolute top-4 right-4 z-20
 					rounded-full w-14 h-14
-					bg-blue-400
+					bg-purple-600
 				"
 				style={{
 					// https://codepen.io/sdthornton/pen/wBZdXq (.card-2)
