@@ -2,17 +2,30 @@
 
 > Personal website.
 
+## Development
+
+1. Install dependencies
+
+```shell
+npm install
+```
+
+2. Start live server
+
+```shell
+npm start
+```
+
+3. Start coding!
+
 ## Building
 
-### Install dependencies
-```bash
-$ npm install
+```shell
+npm run build
 ```
 
-### Compile source files
+Production files are written to the `build/` directory.
 
-```bash
-$ npm run compile:<SOURCESET>
-```
+## License
 
-Compiled files are written to **public/assets/**
+[MIT](LICENSE)
