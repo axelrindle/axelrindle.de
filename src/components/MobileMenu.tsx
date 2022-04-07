@@ -1,7 +1,6 @@
 import { faBars, faClose } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { ReactNode, useCallback, useEffect, useState } from 'react'
-import Heading from './Heading'
 import { update as updateTweens, Tween, Easing } from '@tweenjs/tween.js'
 
 export interface Props {
