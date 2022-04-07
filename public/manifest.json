@@ -1,0 +1,28 @@
+{
+	"$schema": "https://json.schemastore.org/web-manifest-combined.json",
+	"short_name": "axelrindle.de",
+	"name": "Personal Homepage",
+	"lang": "de",
+	"display": "standalone",
+	"orientation": "portrait",
+	"start_url": ".",
+	"theme_color": "#9333ea",
+	"background_color": "#60a5fa",
+	"icons": [
+		{
+			"src": "favicon.png",
+			"sizes": "64x64 32x32 24x24 16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "logo192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "logo512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	]
+}

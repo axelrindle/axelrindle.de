@@ -1,0 +1,30 @@
+/* TODO: Replace @media with tailwind lg: directive */
+/* @media (min-width: 1024px) { */
+	.hoverable::before {
+		transform: scaleY(0);
+		transform-origin: top;
+	}
+	
+	.hoverable:hover::before {
+		transform: scaleY(1);
+		transform-origin: bottom;
+	}
+
+	.hoverable:hover {
+		color: white;
+	}
+	
+	.hoverable::before {
+		content: " ";
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		inset: 0 0 0 0;
+		background: var(--tw-gradient-to);
+		z-index: -1;
+		transition: transform .3s ease;
+	}
+/* } */

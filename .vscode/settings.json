@@ -1,0 +1,6 @@
+{
+    "typescript.format.semicolons": "remove",
+    "javascript.format.semicolons": "remove",
+    "javascript.preferences.quoteStyle": "single",
+    "typescript.preferences.quoteStyle": "single"
+}
