@@ -30,6 +30,13 @@ function App() {
 				link="https://stackoverflow.com/users/5423625/axel" />
 		</>
 	)
+
+	const siteVersion = process.env.REACT_APP_VERSION
+	const siteVersionLink = (() => {
+		if (! siteVersion) return ''
+		else return siteVersion !== 'next' ? '/tree/' + siteVersion : ''
+	})()
+
 	return (
 		// Wrapper
 		<div className="h-full flex flex-col">
@@ -46,6 +53,14 @@ function App() {
 				<Heading text="Axel Rindle" size="8xl" bold />
 				<Heading text="Hobby Developer • Student • Dedicated to Open Source" size="4xl" />
 			</div>
+
+			{/* Version indicator */}
+			<a
+				className="absolute bottom-4 right-4 italic underline text-gray-400 text-xs"
+				href={`https://github.com/axelrindle/axelrindle.de${siteVersionLink}`}
+			>
+				{siteVersion ? "v-" + siteVersion?.substring(0, 10) : "unknown version"}
+			</a>
 
 		</div> // End wrapper
   	);
