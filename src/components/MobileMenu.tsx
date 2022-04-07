@@ -66,7 +66,6 @@ export default function MobileMenu(props: Props) {
 				className={`
 					absolute left-0 right-0 top-0 bottom-0 z-10
 					bg-white
-					flex flex-col justify-center gap-6
 					${!isOpen && '-translate-x-full'}
 					lg:hidden p-10
 				`}
@@ -74,7 +73,12 @@ export default function MobileMenu(props: Props) {
 					transition: 'transform .25s ease-out',
 				}}
 			>
-				{props.buttons}
+				<div className="
+					flex flex-col justify-center gap-6
+					h-full max-w-sm mx-auto
+				">
+					{props.buttons}
+				</div>
 			</div>
 		</>
 	)
