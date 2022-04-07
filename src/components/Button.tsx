@@ -29,7 +29,7 @@ export default function Button(props: Props) {
 			"
 			href={props.link}
 		>
-			<FontAwesomeIcon icon={props.icon} className="justify-self-center" />
+			<FontAwesomeIcon icon={props.icon} className="justify-self-center text-2xl" />
 			<span className="text-left underline col-span-2">
 				{props.text}
 			</span>
