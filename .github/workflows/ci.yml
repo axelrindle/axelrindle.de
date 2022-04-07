@@ -43,7 +43,7 @@ jobs:
       - name: Build production files
         run: npm run build
         env:
-          REACT_APP_VERSION: $GITHUB_SHA
+          REACT_APP_VERSION: ${{ github.sha }}
       - name: Upload files as artifact
         uses: actions/upload-artifact@v3
         with:
