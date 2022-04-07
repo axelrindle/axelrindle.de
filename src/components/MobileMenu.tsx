@@ -34,6 +34,7 @@ export default function MobileMenu(props: Props) {
 			.start()
 	
 		setAnimate(true)
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [isOpen])
 
 	return (
