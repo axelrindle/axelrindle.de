@@ -1,3 +1,4 @@
+import { faCodepen, faGithub, faStackOverflow, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import './App.css'
 import Button from './components/Button'
@@ -13,19 +14,19 @@ function App() {
 				link="mailto:mail@axelrindle.de" />
 			<Button
 				text="Twitter"
-				icon={faEnvelope}
+				icon={faTwitter}
 				link="https://twitter.com/axelrindle" />
 			<Button
 				text="GitHub"
-				icon={faEnvelope}
+				icon={faGithub}
 				link="https://github.com/axelrindle/" />
 			<Button
 				text="Codepen"
-				icon={faEnvelope}
+				icon={faCodepen}
 				link="https://codepen.io/axelrindle" />
 			<Button
 				text="StackOverflow"
-				icon={faEnvelope}
+				icon={faStackOverflow}
 				link="https://stackoverflow.com/users/5423625/axel" />
 		</>
 	)
