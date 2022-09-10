@@ -51,7 +51,7 @@ function App() {
 			{/* Text box */}
 			<div className="flex-1 flex flex-col justify-center gap-10">
 				<Heading text="Axel Rindle" size="8xl" bold />
-				<Heading text="Hobby Developer • Student • Dedicated to Open Source" size="4xl" />
+				<Heading text="Fulltime Developer • Bachelor of Science in Business Informatics • Dedicated to Open Source" size="4xl" />
 			</div>
 
 			{/* Version indicator */}
