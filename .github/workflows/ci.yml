@@ -63,7 +63,7 @@ jobs:
     if: github.event_name == 'push' && github.ref_name == 'main'
     environment:
       name: Dev
-      url: https://www-dev.axelrindle.de/
+      url: https://dev.axelrindle.de/
     steps:
       - name: Download artifact files
         uses: actions/download-artifact@v3
