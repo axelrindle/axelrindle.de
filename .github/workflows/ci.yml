@@ -17,7 +17,7 @@ jobs:
           key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
       - uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 18.x
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
@@ -41,7 +41,7 @@ jobs:
           key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
       - uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 18.x
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
