@@ -100,8 +100,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           port: ${{ secrets.SSH_PORT }}
           username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          passphrase: ${{ secrets.SSH_PRIVATE_KEY_PASSWORD }}
+          password: ${{ secrets.SSH_PASSWORD }}
           source: build
           target: ${{ secrets.DEPLOY_TARGET }}
           strip_components: 1
